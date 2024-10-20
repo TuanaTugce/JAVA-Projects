@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class  {
 
     public static void main(String[] args) {
-        File newFile = new File("hello.txt");
+        File newFile = new File("numbers.txt");
 
         Scanner input = new Scanner(System.in);
         int AccNum;
