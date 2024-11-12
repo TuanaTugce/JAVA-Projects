@@ -1,0 +1,39 @@
+public interface IDatabase {
+    void log();
+    //bu interface i implement eden tüm classların bu metodu kendine göre yazması gerek.
+}
+
+public class Student implements IDatabase {
+    @Override
+    public void log()
+    {
+        System.out.println("new student added");
+    }
+}
+
+public class Customer implements IDatabase{
+    @Override
+    public void log()
+    {
+        System.out.println("New customer added");
+    }
+}
+
+public class Main{
+    public static void main(String[] args)
+    {
+        //IDatabase database = new IDatabase(); //it is illegal cannot create an object
+        //for interfaces
+
+        IDatabase database = new Customer(); //acts as a customer
+        IDatabase database2 = new Student(); //acts as a student
+
+        Customer customer =new Customer();
+        Student student = new Student();
+        student.log();
+        customer.log();
+
+        database.log();
+        database2.log();
+    }
+}
